@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label } from './ui/label';
+import { Label } from './ui/Label';
 import { Input } from './ui/Input';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
