@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image"; // Import Image from next/image
+import Image from "next/image";
 import { cn } from "@/utils/cn";
 
 export const BentoGrid = ({
@@ -48,11 +48,8 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "#0f0c29", // fallback for old browsers
         background:
-          "-webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29)", // Chrome 10-25, Safari 5.1-6
-        background:
-          "linear-gradient(98deg, rgba(18,30,91,1) 0%, rgba(4,7,29,1) 60%)", // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+
+          "linear-gradient(98deg, rgba(18,30,91,1) 0%, rgba(4,7,29,1) 60%)",
       }}
     >
       <div className="group-hover/bento:translate-x-2 translate-y-0 transition duration-200">
@@ -64,10 +61,18 @@ export const BentoGridItem = ({
         >
           {title}
         </div>
-<div
-  className="font-sans text-neutral-600 text-xl font-semibold dark:text-neutral-300"
-  dangerouslySetInnerHTML={{ __html: description }}
-/>
+
+        {/* Ensure description is a string before using dangerouslySetInnerHTML */}
+        {typeof description === "string" ? (
+          <div
+            className="font-sans text-neutral-600 text-xl font-semibold dark:text-neutral-300"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
+        ) : (
+          <div className="font-sans text-neutral-600 text-xl font-semibold dark:text-neutral-300">
+            {description}
+          </div>
+        )}
 
         <div className="flex justify-center items-center h-full">
           {img && (
