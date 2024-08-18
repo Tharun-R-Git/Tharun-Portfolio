@@ -2,7 +2,7 @@
 
 "use client";
 import React from 'react';
-import { projects } from 'c:/Users/Tharun/Desktop/portfolio/data/index';
+import { projects } from '../data/index';
 import { PinContainer } from './ui/ThreeDimensionPin';
 import { FaLocationArrow } from "react-icons/fa6";
 

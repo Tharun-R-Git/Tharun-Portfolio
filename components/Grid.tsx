@@ -1,5 +1,5 @@
 
-import { gridItems } from 'c:/Users/Tharun/Desktop/portfolio/data/index'
+import { gridItems } from '../data/index'
 import { BentoGrid } from './ui/BentoGrid'
 import { BentoGridItem } from './ui/BentoGrid'
 
