@@ -32,7 +32,7 @@ const Education = () => {
   return (
     <div ref={sectionRef} className='my-[100px] px-4 sm:px-10 flex flex-col justify-center items-center gap-20'>
       <h1 className='text-center text-[40px] sm:text-[60px] md:text-[80px] font-bold'>
-        <Cover children='Education'/>
+        <Cover>EDUCATION</Cover>
       </h1>
       
       <div className="lg:w-[100%] flex flex-col md:flex-row gap-10 border-[3px] border-red-500 p-[15px] rounded-2xl bg-[rgb(4,7,29)] transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-[rgb(4,7,45)] hover:shadow-[0_0_10px_2px_rgb(255,0,0)]">
