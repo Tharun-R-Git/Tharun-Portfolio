@@ -37,7 +37,7 @@ const cards: Card[] = [
 
 const ProjectCardList: React.FC = () => {
   return (
-    <div className="project-card-list">
+    <div className="project-card-list scale-75 transform origin-top">
       {cards.map(card => (
         <div key={card.id} className={card.className}>
           <img src={card.thumbnail} alt="Thumbnail" />
