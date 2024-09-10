@@ -30,7 +30,7 @@ const Education = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className='my-[100px] px-4 sm:px-10 flex flex-col justify-center items-center gap-20'>
+    <div ref={sectionRef} className='my-[100px] px-4 sm:px-10 flex flex-col justify-center items-center gap-20 scale-75 transform origin-top'>
       <h1 className='text-center text-[40px] sm:text-[60px] md:text-[80px] font-bold'>
         <Cover>EDUCATION</Cover>
       </h1>
