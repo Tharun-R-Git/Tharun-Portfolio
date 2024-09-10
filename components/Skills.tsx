@@ -34,7 +34,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center gap-[40px]'>
+    <div className='flex flex-col justify-center items-center gap-[40px] scale-75 transform origin-top'>
       <h1 className='py-5 px-10 text-center text-[30px] sm:text-[60px] md:text-[70px] font-bold'>
         Skills
       </h1>
