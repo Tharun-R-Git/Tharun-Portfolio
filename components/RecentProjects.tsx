@@ -8,7 +8,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 const RecentProjects = () => {
   return (
-    <div className="-mt-[300px] z-100">
+    <div className="-mt-[300px] z-100 scale-75 transform origin-top">
       <div className="flex flex-wrap items-center justify-center p-0 gap-16 mt-10">
         {projects.map((item) => (
           <div
