@@ -25,21 +25,23 @@ export const FloatingNav = ({
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(direction < 0);
       }
     }
   });
+
+  const handleScroll = (link: string) => {
+    const targetSection = document.querySelector(link);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -60,17 +62,17 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
+        {navItems.map((navItem, idx) => (
+          <button
             key={`link=${idx}`}
-            href={navItem.link}
+            onClick={() => handleScroll(navItem.link)}
             className={cn(
-              "relative dark:text-neutral-50 flex items-center text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 px-4 font-semibold tracking-wider py-1" // Added padding here
+              "relative dark:text-neutral-50 flex items-center text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 px-4 font-semibold tracking-wider py-1"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
+          </button>
         ))}
       </motion.div>
     </AnimatePresence>
