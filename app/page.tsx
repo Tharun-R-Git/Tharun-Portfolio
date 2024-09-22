@@ -20,7 +20,7 @@ export default function Home() {
           navItems={[
             { name: 'Home', link: '#Home', icon: <FaHome />,  },
             { name: 'About Me', link: '#Grid', icon: <IoPersonCircleOutline /> },
-            { name: 'Projects', link: '#LampDemo', icon: <GrProjects /> },
+            { name: 'Projects', link: '#Projects', icon: <GrProjects /> },
             { name: 'Skills', link: '#Skills', icon: <FaTools /> },
             { name: 'Education', link: '#Education', icon: <FaUserGraduate /> },
             { name: 'Contact', link: '#Contact', icon: <FaPhoneAlt /> },
